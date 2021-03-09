@@ -1,15 +1,15 @@
 let gulp = require ('gulp'),
     sass = require ('gulp-sass'),
     rename = require ('gulp-rename'),
-    browserSync = require('browser-sync')
-    autoprefixer = require('gulp-autoprefixer')
+    browserSync = require('browser-sync'),
+    autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     cleanCSS = require('gulp-clean-css');
 
 
 gulp.task('sass', function(){
-    return gulp.src('app/scss/style.scss')
+    return gulp.src('app/scss/**/*.scss')
             .pipe(sass({outputStyle: 'compressed'}))
             .pipe(rename({suffix : '.min'}))
             .pipe(autoprefixer({
@@ -56,7 +56,7 @@ gulp.task('sass', function(){
     });
 
 gulp.task('watch', function(){
-    gulp.watch('app/scss/style.scss', gulp.parallel('sass'))
+    gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'))
     gulp.watch('app/*.html', gulp.parallel('html'))
     gulp.watch('app/js/*.js', gulp.parallel('js'))
 });
