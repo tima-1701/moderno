@@ -381,5 +381,132 @@
             color: $bg;
         }
     }
-
 // end tutorial
+// start footer
+.footer{
+    background-color: $bg;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0 80px;
+    }
+}
+.footer__copy{
+    border-top: 1px solid #424d53;
+}
+.footer__copy-text{
+    text-align: center;
+    color: #919699;
+    padding: 25px 0 25px;
+}
+.footer__col{
+    max-width: 270px;
+    // width: 100%;
+    &-menu{
+        max-width: 220px;
+    }
+    &-title{
+        font-size: 22px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        color: #fff;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 2px;
+            width: 51px;
+            height: 3px;
+            background-color: $green;
+        }
+
+    }
+    &-text{
+        color: #b7c3c8;
+        margin-bottom: 30px;
+    }
+}
+.footer__info{
+    margin-top: 18px;
+    @include f500;
+    color: #fff;
+    display: flex;
+}
+.footer__social-link{
+    margin-bottom: 33px;
+    li{
+        display: inline-block;
+    }
+    a{
+        width: 28px;
+        height: 28px;
+    }
+    }
+
+    .link-facebook{
+        background-image: url(../images/content/s/Layer232.jpg);
+    }
+    .link-twitter{
+        background-image: url(../images/content/s/Layer233.jpg);
+    }
+    .link-youtube{
+        background-image: url(../images/content/s/Layer234.jpg);
+    }
+    .link-pinterest{
+        background-image: url(../images/content/s/Layer235.jpg);
+    }
+    .link-linledin{
+        background-image: url(../images/content/s/Layer236.jpg);
+    }   
+
+    .footer__form-title{
+        margin-bottom: 15px;
+        color: #fff;
+        font-size: 20px;
+    }
+    .footer__form{
+        position: relative;
+        input{
+            border: none;
+            background-color: #2f3c43;
+            display: block;
+            width: 100%;
+            height: 40px;
+            color: #fff;
+            font-size: 14px;
+            padding-left: 13px;
+            padding-right: 50px;
+            &::placeholder{
+                color: #697378;
+            }
+        }
+        button{
+            position: absolute;
+            bottom: 0px;
+            right: 0;
+            background-color: $green;
+            border: none;
+            height: 40px;
+            width: 43px;
+            cursor: pointer;
+            &::before{
+                content: '';
+                position: absolute;
+                background-image: url(../images/icons/search.png);
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                top: 10px;
+                left: 14px;
+            }
+        }
+    }
+    .footer__col-list{
+        li{
+            margin-bottom: 25px;
+        }
+    }
+// end footer
