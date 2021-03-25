@@ -1,3 +1,5 @@
+const { on } = require('gulp');
+
 $(function(){
 
     $(".rate-star").rateYo({
@@ -12,6 +14,10 @@ $(function(){
         arrows: false,
         slidesToShow: 4,
         slidesToScroll: 4,
+      });
+      
+      $('.menu__btn').on('click', function(){
+        $('.menu__list').slideToggle();
       });
 
     var mixer = mixitup('.products__inner-box');
