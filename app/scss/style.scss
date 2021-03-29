@@ -152,6 +152,7 @@
 .circle__menu{
     position: absolute;
     top: 69px;
+    z-index: 1;
 }
 .user__box,
 .bascet__box,
@@ -175,7 +176,7 @@
     right: -10px;
     height: 0;
     overflow: hidden;
-    transition: all .9s;
+    transition: all .3s;
 }
 .bascet__box,
 .message__box,
@@ -267,6 +268,10 @@
     .circle__info{
         line-height: 18px;
     }
+}
+.header__btn-menu,
+.menu__btn{
+    display: none;
 }
 // end header
 // start search
